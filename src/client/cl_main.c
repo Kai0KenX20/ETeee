@@ -4373,7 +4373,7 @@ static void CL_InitGLimp_Cvars( void )
 	Cvar_CheckRange( cl_depthbits, "0", "32", CV_INTEGER );
 	Cvar_SetDescription( cl_depthbits, "Sets precision of Z-buffer" );
 
-	cl_drawBuffer = Cvar_Get( "r_drawBuffer", "GL_BACK", CVAR_CHEAT );
+	cl_drawBuffer = Cvar_Get( "r_drawBuffer", "GL_BACK", CVAR_ARCHIVE );
 	Cvar_SetDescription( cl_drawBuffer, "Specifies buffer to draw from: GL_FRONT or GL_BACK" );
 #ifdef USE_RENDERER_DLOPEN
 #ifdef RENDERER_DEFAULT

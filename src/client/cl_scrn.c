@@ -492,11 +492,11 @@ SCR_Init
 ==================
 */
 void SCR_Init( void ) {
-	cl_timegraph = Cvar_Get ("timegraph", "0", CVAR_CHEAT);
-	cl_debuggraph = Cvar_Get ("debuggraph", "0", CVAR_CHEAT);
-	cl_graphheight = Cvar_Get ("graphheight", "32", CVAR_CHEAT);
-	cl_graphscale = Cvar_Get ("graphscale", "1", CVAR_CHEAT);
-	cl_graphshift = Cvar_Get ("graphshift", "0", CVAR_CHEAT);
+	cl_timegraph = Cvar_Get ("timegraph", "0", CVAR_ARCHIVE);
+	cl_debuggraph = Cvar_Get ("debuggraph", "0", CVAR_ARCHIVE);
+	cl_graphheight = Cvar_Get ("graphheight", "32", CVAR_ARCHIVE);
+	cl_graphscale = Cvar_Get ("graphscale", "1", CVAR_ARCHIVE);
+	cl_graphshift = Cvar_Get ("graphshift", "0", CVAR_ARCHIVE);
 
 	scr_initialized = qtrue;
 }

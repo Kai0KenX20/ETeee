@@ -4109,18 +4109,18 @@ void Com_Init( char *commandLine ) {
 	com_affinityMask->modified = qfalse;
 #endif
 
-	com_timescale = Cvar_Get( "timescale", "1", CVAR_CHEAT | CVAR_SYSTEMINFO );
+	com_timescale = Cvar_Get( "timescale", "1", CVAR_ARCHIVE | CVAR_SYSTEMINFO );
 	Cvar_CheckRange( com_timescale, "0", "100", CV_FLOAT );
 	Cvar_SetDescription( com_timescale, "System timing factor:\n < 1: Slows the game down\n = 1: Regular speed\n > 1: Speeds the game up" );
-	com_fixedtime = Cvar_Get( "fixedtime", "0", CVAR_CHEAT );
+	com_fixedtime = Cvar_Get( "fixedtime", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( com_fixedtime, "Toggle the rendering of every frame the game will wait until each frame is completely rendered before sending the next frame" );
-	com_showtrace = Cvar_Get( "com_showtrace", "0", CVAR_CHEAT );
+	com_showtrace = Cvar_Get( "com_showtrace", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( com_showtrace, "Debugging tool that prints out trace information" );
 	com_viewlog = Cvar_Get( "viewlog", "0", 0 );
 	Cvar_SetDescription( com_viewlog, "Toggle the display of the startup console window over the game screen (Windows only)" );
 	com_speeds = Cvar_Get( "com_speeds", "0", 0 );
 	Cvar_SetDescription( com_speeds, "Prints speed information per frame to the console. Used for debugging" );
-	com_cameraMode = Cvar_Get( "com_cameraMode", "0", CVAR_CHEAT );
+	com_cameraMode = Cvar_Get( "com_cameraMode", "0", CVAR_ARCHIVE );
 
 	com_watchdog = Cvar_Get( "com_watchdog", "60", CVAR_ARCHIVE_ND );
 	Cvar_CheckRange( com_watchdog, "1", "240", CV_INTEGER );
@@ -4129,21 +4129,21 @@ void Com_Init( char *commandLine ) {
 	Cvar_SetDescription( com_watchdog_cmd, "Command to execute when \\com_watchdog conditions are met, if set otherwise server process will quit");
 
 #ifndef DEDICATED	
-	com_timedemo = Cvar_Get( "timedemo", "0", CVAR_CHEAT );
+	com_timedemo = Cvar_Get( "timedemo", "0", CVAR_ARCHIVE );
 	Cvar_CheckRange( com_timedemo, "0", "1", CV_INTEGER );
 	Cvar_SetDescription( com_timedemo, "When set to '1' times a demo and returns frames per second like a benchmark" );
 	cl_paused = Cvar_Get( "cl_paused", "0", CVAR_ROM );
-	cl_packetdelay = Cvar_Get( "cl_packetdelay", "0", CVAR_CHEAT );
+	cl_packetdelay = Cvar_Get( "cl_packetdelay", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( cl_packetdelay, "Artificially set the client's latency. Simulates packet delay, which can lead to packet loss" );
-	cl_packetloss = Cvar_Get( "cl_packetloss", "0", CVAR_CHEAT );
+	cl_packetloss = Cvar_Get( "cl_packetloss", "0", CVAR_ARCHIVE );
 	com_cl_running = Cvar_Get( "cl_running", "0", CVAR_ROM | CVAR_NOTABCOMPLETE );
 	Cvar_SetDescription( com_cl_running, "Can be used to check the status of the client game" );
 #endif
 
 	sv_paused = Cvar_Get( "sv_paused", "0", CVAR_ROM );
-	sv_packetdelay = Cvar_Get( "sv_packetdelay", "0", CVAR_CHEAT );
+	sv_packetdelay = Cvar_Get( "sv_packetdelay", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( sv_packetdelay, "Simulates packet delay, which can lead to packet loss. Server side" );
-	sv_packetloss = Cvar_Get( "sv_packetloss", "0", CVAR_CHEAT );
+	sv_packetloss = Cvar_Get( "sv_packetloss", "0", CVAR_ARCHIVE );
 	com_sv_running = Cvar_Get( "sv_running", "0", CVAR_ROM | CVAR_NOTABCOMPLETE );
 	Cvar_SetDescription( com_sv_running, "Communicates to game modules if there is a server currently running" );
 

@@ -376,7 +376,7 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_shadows, "cg_shadows", "1", CVAR_ARCHIVE  },
 	{ &cg_gibs, "cg_gibs", "1", CVAR_ARCHIVE  },
 //bani - #127 - we now draw reticles always in non demoplayback
-//	{ &cg_draw2D, "cg_draw2D", "1", CVAR_CHEAT }, // JPW NERVE changed per atvi req to prevent sniper rifle zoom cheats
+//	{ &cg_draw2D, "cg_draw2D", "1", CVAR_ARCHIVE }, // JPW NERVE changed per atvi req to prevent sniper rifle zoom cheats
 	{ &cg_draw2D, "cg_draw2D", "1", CVAR_ARCHIVE },
 	{ &cg_drawSpreadScale, "cg_drawSpreadScale", "1", CVAR_ARCHIVE },
 	{ &cg_drawStatus, "cg_drawStatus", "1", CVAR_ARCHIVE  },
@@ -399,7 +399,7 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_gun_x, "cg_gunX", "0", CVAR_ARCHIVE },
 	{ &cg_gun_y, "cg_gunY", "0", CVAR_ARCHIVE },
 	{ &cg_gun_z, "cg_gunZ", "0", CVAR_ARCHIVE },
-	{ &cg_centertime, "cg_centertime", "5", CVAR_CHEAT },     // DHM - Nerve :: changed from 3 to 5
+	{ &cg_centertime, "cg_centertime", "5", CVAR_ARCHIVE },     // DHM - Nerve :: changed from 3 to 5
 	{ &cg_runpitch, "cg_runpitch", "0.002", CVAR_ARCHIVE},
 	{ &cg_runroll, "cg_runroll", "0.005", CVAR_ARCHIVE },
 	{ &cg_bobup, "cg_bobup", "0.005", CVAR_ARCHIVE },
@@ -408,10 +408,10 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_bobyaw, "cg_bobyaw", "0.002", CVAR_ARCHIVE },
 
 	// Ridah, more fluid rotations
-	{ &cg_swingSpeed, "cg_swingSpeed", "0.1", CVAR_CHEAT },   // was 0.3 for Q3
+	{ &cg_swingSpeed, "cg_swingSpeed", "0.1", CVAR_ARCHIVE },   // was 0.3 for Q3
 	{ &cg_bloodTime, "cg_bloodTime", "120", CVAR_ARCHIVE },
 
-	{ &cg_skybox, "cg_skybox", "1", CVAR_CHEAT },
+	{ &cg_skybox, "cg_skybox", "1", CVAR_ARCHIVE },
 	// done.
 
 	// ydnar: say, team say, etc.
@@ -420,22 +420,22 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_messagePlayer, "cg_messagePlayer", "", CVAR_TEMP },
 	{ &cg_messagePlayerName, "cg_messagePlayerName", "", CVAR_TEMP },
 
-	{ &cg_animSpeed, "cg_animspeed", "1", CVAR_CHEAT },
-	{ &cg_debugAnim, "cg_debuganim", "0", CVAR_CHEAT },
-	{ &cg_debugPosition, "cg_debugposition", "0", CVAR_CHEAT },
-	{ &cg_debugEvents, "cg_debugevents", "0", CVAR_CHEAT },
+	{ &cg_animSpeed, "cg_animspeed", "1", CVAR_ARCHIVE },
+	{ &cg_debugAnim, "cg_debuganim", "0", CVAR_ARCHIVE },
+	{ &cg_debugPosition, "cg_debugposition", "0", CVAR_ARCHIVE },
+	{ &cg_debugEvents, "cg_debugevents", "0", CVAR_ARCHIVE },
 	{ &cg_errorDecay, "cg_errordecay", "100", 0, CG_ErrorDecayRange },
-	{ &cg_nopredict, "cg_nopredict", "0", CVAR_CHEAT },
-	{ &cg_noPlayerAnims, "cg_noplayeranims", "0", CVAR_CHEAT },
+	{ &cg_nopredict, "cg_nopredict", "0", CVAR_ARCHIVE },
+	{ &cg_noPlayerAnims, "cg_noplayeranims", "0", CVAR_ARCHIVE },
 	{ &cg_showmiss, "cg_showmiss", "0", 0 },
-	{ &cg_footsteps, "cg_footsteps", "1", CVAR_CHEAT },
-	{ &cg_tracerChance, "cg_tracerchance", "0.4", CVAR_CHEAT },
-	{ &cg_tracerWidth, "cg_tracerwidth", "0.8", CVAR_CHEAT },
-	{ &cg_tracerSpeed, "cg_tracerSpeed", "4500", CVAR_CHEAT },
-	{ &cg_tracerLength, "cg_tracerlength", "160", CVAR_CHEAT },
-	{ &cg_thirdPersonRange, "cg_thirdPersonRange", "80", CVAR_CHEAT }, // JPW NERVE per atvi req
-	{ &cg_thirdPersonAngle, "cg_thirdPersonAngle", "0", CVAR_CHEAT },
-	{ &cg_thirdPerson, "cg_thirdPerson", "0", CVAR_CHEAT }, // JPW NERVE per atvi req
+	{ &cg_footsteps, "cg_footsteps", "1", CVAR_ARCHIVE },
+	{ &cg_tracerChance, "cg_tracerchance", "0.4", CVAR_ARCHIVE },
+	{ &cg_tracerWidth, "cg_tracerwidth", "0.8", CVAR_ARCHIVE },
+	{ &cg_tracerSpeed, "cg_tracerSpeed", "4500", CVAR_ARCHIVE },
+	{ &cg_tracerLength, "cg_tracerlength", "160", CVAR_ARCHIVE },
+	{ &cg_thirdPersonRange, "cg_thirdPersonRange", "80", CVAR_ARCHIVE }, // JPW NERVE per atvi req
+	{ &cg_thirdPersonAngle, "cg_thirdPersonAngle", "0", CVAR_ARCHIVE },
+	{ &cg_thirdPerson, "cg_thirdPerson", "0", CVAR_ARCHIVE }, // JPW NERVE per atvi req
 	{ &cg_teamChatTime, "cg_teamChatTime", "8000", CVAR_ARCHIVE  },
 	{ &cg_teamChatHeight, "cg_teamChatHeight", "8", CVAR_ARCHIVE  },
 	{ &cg_coronafardist, "cg_coronafardist", "1536", CVAR_ARCHIVE },
@@ -446,13 +446,13 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_blinktime, "cg_blinktime", "100", CVAR_ARCHIVE},         //----(SA)	added
 
 	//{ &cg_enableBreath, "cg_enableBreath", "1", CVAR_SERVERINFO},
-	{ &cg_cameraOrbit, "cg_cameraOrbit", "0", CVAR_CHEAT},
+	{ &cg_cameraOrbit, "cg_cameraOrbit", "0", CVAR_ARCHIVE},
 	{ &cg_cameraOrbitDelay, "cg_cameraOrbitDelay", "50", CVAR_ARCHIVE},
 	{ &cg_timescaleFadeEnd, "cg_timescaleFadeEnd", "1", 0},
 	{ &cg_timescaleFadeSpeed, "cg_timescaleFadeSpeed", "0", 0},
 	{ &cg_timescale, "timescale", "1", 0},
 //	{ &cg_smoothClients, "cg_smoothClients", "0", CVAR_USERINFO | CVAR_ARCHIVE},
-	{ &cg_cameraMode, "com_cameraMode", "0", CVAR_CHEAT},
+	{ &cg_cameraMode, "com_cameraMode", "0", CVAR_ARCHIVE},
 
 	{ &cg_noTaunt, "cg_noTaunt", "0", CVAR_ARCHIVE},                      // NERVE - SMF
 	{ &cg_voiceSpriteTime, "cg_voiceSpriteTime", "6000", CVAR_ARCHIVE},       // DHM - Nerve
@@ -479,14 +479,14 @@ static const vmCvarTableItem_t cg_cvars[] = {
 	{ &cg_bluelimbotime,        "", "30000", 0 }, // communicated by systeminfo
 	{ &cg_redlimbotime,         "", "30000", 0 }, // communicated by systeminfo
 	{ &cg_movespeed, "g_movespeed", "76", 0 }, // actual movespeed of player
-	{ &cg_animState, "cg_animState", "0", CVAR_CHEAT},
+	{ &cg_animState, "cg_animState", "0", CVAR_ARCHIVE},
 	{ &cg_drawCompass, "cg_drawCompass", "1", CVAR_ARCHIVE },
 	{ &cg_drawNotifyText, "cg_drawNotifyText", "1", CVAR_ARCHIVE },
 	{ &cg_quickMessageAlt, "cg_quickMessageAlt", "0", CVAR_ARCHIVE },
 	{ &cg_popupLimboMenu, "cg_popupLimboMenu", "1", CVAR_ARCHIVE },
 	{ &cg_descriptiveText, "cg_descriptiveText", "1", CVAR_ARCHIVE },
 	{ &cg_antilag, "g_antilag", "1", 0 },
-	{ &cg_developer, "developer", "0", CVAR_CHEAT },
+	{ &cg_developer, "developer", "0", CVAR_ARCHIVE },
 	{ &cf_wstats, "cf_wstats", "1.2", CVAR_ARCHIVE },
 	{ &cf_wtopshots, "cf_wtopshots", "1.0", CVAR_ARCHIVE },
 	//{ &cg_announcer, "cg_announcer", "1", CVAR_ARCHIVE },

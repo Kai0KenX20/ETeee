@@ -1749,7 +1749,7 @@ static void R_Register( void )
 	r_intensity = ri.Cvar_Get( "r_intensity", "1", CVAR_LATCH );
 	ri.Cvar_CheckRange( r_intensity, "1", "1.5", CV_FLOAT ); // ri.Cvar_CheckRange( r_intensity, "1", "255", CV_FLOAT );
 	ri.Cvar_SetDescription( r_intensity, "Global texture lighting scale" );
-	r_singleShader = ri.Cvar_Get( "r_singleShader", "0", CVAR_CHEAT | CVAR_LATCH );
+	r_singleShader = ri.Cvar_Get( "r_singleShader", "0", CVAR_ARCHIVE | CVAR_LATCH );
 	ri.Cvar_SetDescription( r_singleShader, "Debugging tool that only uses the default shader for all rendering" );
 	r_defaultImage = ri.Cvar_Get( "r_defaultImage", "", CVAR_ARCHIVE_ND | CVAR_LATCH );
 	ri.Cvar_SetDescription( r_defaultImage, "Replace default (missing) image texture by either exact file or solid #rgb|#rrggbb background color" );
@@ -1804,11 +1804,11 @@ static void R_Register( void )
 	ri.Cvar_SetDescription( r_lodCurveError, "Level of detail error on curved surface grids" );
 	r_lodbias = ri.Cvar_Get( "r_lodbias", "0", CVAR_ARCHIVE_ND );
 	ri.Cvar_SetDescription( r_lodbias, "Sets the level of detail of in-game models:\n 0: High\n 1: Medium\n 2: Low" );
-	r_znear = ri.Cvar_Get( "r_znear", "3", CVAR_CHEAT );  // ydnar: changed it to 3 (from 4) because of lean/fov cheats
+	r_znear = ri.Cvar_Get( "r_znear", "3", CVAR_ARCHIVE );  // ydnar: changed it to 3 (from 4) because of lean/fov cheats
 	ri.Cvar_CheckRange( r_znear, "0.001", "200", CV_FLOAT );
 	ri.Cvar_SetDescription( r_znear, "Viewport distance from view origin (how close objects can be to the player before they're clipped out of the scene)" );
 //----(SA)	added
-	r_zfar = ri.Cvar_Get( "r_zfar", "0", CVAR_CHEAT );
+	r_zfar = ri.Cvar_Get( "r_zfar", "0", CVAR_ARCHIVE );
 //----(SA)	end
 	r_zproj = ri.Cvar_Get( "r_zproj", "64", CVAR_ARCHIVE_ND );
 	ri.Cvar_SetDescription( r_zproj, "Projected viewport frustum" );
@@ -1863,9 +1863,9 @@ static void R_Register( void )
 	r_railSegmentLength = ri.Cvar_Get( "r_railSegmentLength", "32", CVAR_ARCHIVE_ND );
 	ri.Cvar_SetDescription( r_railSegmentLength, "Length of segments in \"railgun\" trails. Used for debugging only" );
 
-	r_ambientScale = ri.Cvar_Get( "r_ambientScale", "0.5", CVAR_CHEAT );
+	r_ambientScale = ri.Cvar_Get( "r_ambientScale", "0.5", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_ambientScale, "Light grid ambient light scaling on entity models" );
-	r_directedScale = ri.Cvar_Get( "r_directedScale", "1", CVAR_CHEAT );
+	r_directedScale = ri.Cvar_Get( "r_directedScale", "1", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_directedScale, "Light grid direct light scaling on entity models" );
 
 	//r_anaglyphMode = ri.Cvar_Get( "r_anaglyphMode", "0", CVAR_ARCHIVE_ND );
@@ -1893,60 +1893,60 @@ static void R_Register( void )
 
 	r_debugLight = ri.Cvar_Get( "r_debuglight", "0", CVAR_TEMP );
 	ri.Cvar_SetDescription( r_debugLight, "Debugging tool to print ambient and directed lighting information" );
-	r_debugSort = ri.Cvar_Get( "r_debugSort", "0", CVAR_CHEAT );
+	r_debugSort = ri.Cvar_Get( "r_debugSort", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_debugSort, "Debugging tool to filter out shaders with depth sorting order values higher than the set value" );
 	r_printShaders = ri.Cvar_Get( "r_printShaders", "0", 0 );
 	ri.Cvar_SetDescription( r_printShaders, "Debugging tool to print on console of the number of shaders used" );
 	r_saveFontData = ri.Cvar_Get( "r_saveFontData", "0", 0 );
 	// Ridah
 	r_cacheGathering = ri.Cvar_Get( "cl_cacheGathering", "0", 0 );
-	r_bonesDebug = ri.Cvar_Get( "r_bonesDebug", "0", CVAR_CHEAT );
+	r_bonesDebug = ri.Cvar_Get( "r_bonesDebug", "0", CVAR_ARCHIVE );
 	// done.
 
 	// Rafael - wolf fog
-	r_wolffog = ri.Cvar_Get( "r_wolffog", "1", CVAR_CHEAT ); // JPW NERVE cheat protected per id request
+	r_wolffog = ri.Cvar_Get( "r_wolffog", "1", CVAR_ARCHIVE ); // JPW NERVE cheat protected per id request
 	// done
 
-	r_nocurves = ri.Cvar_Get( "r_nocurves", "0", CVAR_CHEAT );
+	r_nocurves = ri.Cvar_Get( "r_nocurves", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_nocurves, "Disable drawing bezier curves" );
-	r_drawworld = ri.Cvar_Get( "r_drawworld", "1", CVAR_CHEAT );
+	r_drawworld = ri.Cvar_Get( "r_drawworld", "1", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_drawworld, "Enable/Disable drawing world" );
-	r_drawfoliage = ri.Cvar_Get( "r_drawfoliage", "1", CVAR_CHEAT );  // ydnar
+	r_drawfoliage = ri.Cvar_Get( "r_drawfoliage", "1", CVAR_ARCHIVE );  // ydnar
 	ri.Cvar_SetDescription( r_drawfoliage, "Enable/Disable drawing foliage surfaces" );
-	r_lightmap = ri.Cvar_Get( "r_lightmap", "0", CVAR_CHEAT ); // DHM - NERVE :: cheat protect
+	r_lightmap = ri.Cvar_Get( "r_lightmap", "0", CVAR_ARCHIVE ); // DHM - NERVE :: cheat protect
 	ri.Cvar_SetDescription( r_lightmap, "Show only lightmaps on all world surfaces" );
-	r_portalOnly = ri.Cvar_Get( "r_portalOnly", "0", CVAR_CHEAT );
+	r_portalOnly = ri.Cvar_Get( "r_portalOnly", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_portalOnly, "Set to 1 to render only first mirror/portal view if it is present on the scene" );
 
-	r_flareSize = ri.Cvar_Get( "r_flareSize", "40", CVAR_CHEAT );
+	r_flareSize = ri.Cvar_Get( "r_flareSize", "40", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_flareSize, "Radius of light flares. Requires \\r_flares 1" );
 	ri.Cvar_Set( "r_flareFade", "5" ); // to force this when people already have "7" in their config
-	r_flareFade = ri.Cvar_Get( "r_flareFade", "5", CVAR_CHEAT );
+	r_flareFade = ri.Cvar_Get( "r_flareFade", "5", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_flareFade, "Distance to fade out light flares. Requires \\r_flares 1" );
 
-	r_skipBackEnd = ri.Cvar_Get( "r_skipBackEnd", "0", CVAR_CHEAT );
+	r_skipBackEnd = ri.Cvar_Get( "r_skipBackEnd", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_skipBackEnd, "Skips loading rendering backend" );
 
-	r_lodscale = ri.Cvar_Get( "r_lodscale", "5", CVAR_CHEAT );
+	r_lodscale = ri.Cvar_Get( "r_lodscale", "5", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_lodscale, "Set scale for level of detail adjustment" );
-	r_norefresh = ri.Cvar_Get( "r_norefresh", "0", CVAR_CHEAT );
+	r_norefresh = ri.Cvar_Get( "r_norefresh", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_norefresh, "Bypasses refreshing of the rendered scene" );
-	r_drawentities = ri.Cvar_Get( "r_drawentities", "1", CVAR_CHEAT );
+	r_drawentities = ri.Cvar_Get( "r_drawentities", "1", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_drawentities, "Draw all world entities" );
-	r_nocull = ri.Cvar_Get( "r_nocull", "0", CVAR_CHEAT );
+	r_nocull = ri.Cvar_Get( "r_nocull", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_nocull, "Draw all culled objects" );
-	r_novis = ri.Cvar_Get( "r_novis", "0", CVAR_CHEAT );
+	r_novis = ri.Cvar_Get( "r_novis", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_novis, "Disables usage of PVS" );
-	r_showcluster = ri.Cvar_Get( "r_showcluster", "0", CVAR_CHEAT );
+	r_showcluster = ri.Cvar_Get( "r_showcluster", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_showcluster, "Shows current cluster index" );
-	r_speeds = ri.Cvar_Get( "r_speeds", "0", CVAR_CHEAT );
+	r_speeds = ri.Cvar_Get( "r_speeds", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_speeds, "Prints out various debugging stats from PVS:\n 0: Disabled\n 1: Backend BSP\n 2: Frontend grid culling\n 3: Current view cluster index\n 4: Dynamic lighting\n 5: zFar clipping\n 6: Flares" );
-	//r_logFile = ri.Cvar_Get( "r_logFile", "0", CVAR_CHEAT );
-	r_debugSurface = ri.Cvar_Get( "r_debugSurface", "0", CVAR_CHEAT );
+	//r_logFile = ri.Cvar_Get( "r_logFile", "0", CVAR_ARCHIVE );
+	r_debugSurface = ri.Cvar_Get( "r_debugSurface", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_debugSurface, "Backend visual debugging tool for bezier mesh surfaces" );
-	r_nobind = ri.Cvar_Get( "r_nobind", "0", CVAR_CHEAT );
+	r_nobind = ri.Cvar_Get( "r_nobind", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_nobind, "Backend debugging tool: Disables texture binding" );
-	r_showtris = ri.Cvar_Get( "r_showtris", "0", CVAR_CHEAT );
+	r_showtris = ri.Cvar_Get( "r_showtris", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_showtris, "Debugging tool: Wireframe rendering of polygon triangles in the world" );
 	ri.Cvar_CheckRange( r_showtris, "0", "2", CV_INTEGER );
 	r_trisMode = ri.Cvar_Get( "r_trisMode", "1", CVAR_ARCHIVE_ND );
@@ -1957,11 +1957,11 @@ static void R_Register( void )
 	r_trisColor = ri.Cvar_Get( "r_trisColor", "1.0 1.0 1.0 1.0", CVAR_ARCHIVE_ND );
 	r_showsky = ri.Cvar_Get( "r_showsky", "0", 0 );
 	ri.Cvar_SetDescription( r_showsky, "Forces sky in front of all surfaces" );
-	r_shownormals = ri.Cvar_Get( "r_shownormals", "0", CVAR_CHEAT );
+	r_shownormals = ri.Cvar_Get( "r_shownormals", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_shownormals, "Debugging tool: Show wireframe surface normals" );
 	r_normallength = ri.Cvar_Get( "r_normallength", "0.5", CVAR_ARCHIVE_ND );
-	r_showmodelbounds = ri.Cvar_Get( "r_showmodelbounds", "0", CVAR_CHEAT );
-	r_clear = ri.Cvar_Get( "r_clear", "0", CVAR_CHEAT );
+	r_showmodelbounds = ri.Cvar_Get( "r_showmodelbounds", "0", CVAR_ARCHIVE );
+	r_clear = ri.Cvar_Get( "r_clear", "0", CVAR_ARCHIVE );
 
 	ri.Cvar_SetDescription( r_clear,
 		"Force screen clear every frame:\n" \
@@ -1970,15 +1970,15 @@ static void R_Register( void )
 		"  2 - black\n"
 		"  rrr ggg bbb - color format also accepted" );
 
-	r_offsetFactor = ri.Cvar_Get( "r_offsetfactor", "-1", CVAR_CHEAT );
+	r_offsetFactor = ri.Cvar_Get( "r_offsetfactor", "-1", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_offsetFactor, "Offset factor for shaders with polygonOffset stages" );
-	r_offsetUnits = ri.Cvar_Get( "r_offsetunits", "-2", CVAR_CHEAT );
+	r_offsetUnits = ri.Cvar_Get( "r_offsetunits", "-2", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_offsetUnits, "Offset units for shaders with polygonOffset stages" );
-	r_drawBuffer = ri.Cvar_Get( "r_drawBuffer", "GL_BACK", CVAR_CHEAT );
+	r_drawBuffer = ri.Cvar_Get( "r_drawBuffer", "GL_BACK", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_drawBuffer, "Sets which frame buffer to draw into" );
-	r_lockpvs = ri.Cvar_Get( "r_lockpvs", "0", CVAR_CHEAT );
+	r_lockpvs = ri.Cvar_Get( "r_lockpvs", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription( r_lockpvs, "Debugging tool: Locks to current potentially visible set. Useful for testing vis-culling in maps" );
-	r_noportals = ri.Cvar_Get( "r_noportals", "0", CVAR_CHEAT );
+	r_noportals = ri.Cvar_Get( "r_noportals", "0", CVAR_ARCHIVE );
 	ri.Cvar_SetDescription(r_noportals, "Disables in-game portals, valid values: 0: Portals enabled\n 1: Portals disabled\n 2: Portals and mirrors disabled" );
 	r_shadows = ri.Cvar_Get( "cg_shadows", "1", CVAR_VM_CREATED );
 
@@ -2009,7 +2009,7 @@ static void R_Register( void )
 
 	r_highQualityVideo = ri.Cvar_Get( "r_highQualityVideo", "1", CVAR_ARCHIVE );
 
-	r_useFirstPersonEnvMaps = ri.Cvar_Get( "r_useFirstPersonEnvMaps", "1", CVAR_CHEAT );
+	r_useFirstPersonEnvMaps = ri.Cvar_Get( "r_useFirstPersonEnvMaps", "1", CVAR_ARCHIVE );
 	if ( glConfig.vidWidth )
 		return;
 

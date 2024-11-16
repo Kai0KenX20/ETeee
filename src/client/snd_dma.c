@@ -2437,9 +2437,9 @@ qboolean S_Base_Init( soundInterface_t *si ) {
 	s_mixOffset = Cvar_Get( "s_mixOffset", "0", CVAR_ARCHIVE_ND | CVAR_DEVELOPER );
 	Cvar_CheckRange( s_mixOffset, "0", "0.5", CV_FLOAT );
 
-	s_show = Cvar_Get( "s_show", "0", CVAR_CHEAT );
+	s_show = Cvar_Get( "s_show", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( s_show, "Debugging output (used sound files)" );
-	s_testsound = Cvar_Get( "s_testsound", "0", CVAR_CHEAT );
+	s_testsound = Cvar_Get( "s_testsound", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( s_testsound, "Debugging tool that plays a simple sine wave tone to test the sound system" );
 #if defined(__linux__) && !defined(USE_SDL)
 	s_device = Cvar_Get( "s_device", "default", CVAR_ARCHIVE_ND | CVAR_LATCH );

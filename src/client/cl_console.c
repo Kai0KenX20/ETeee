@@ -412,7 +412,7 @@ void Con_Init( void )
 	Cvar_CheckRange( con_height, "0.01", "1", CV_FLOAT );
 	Cvar_SetDescription( con_height, "Default height for normal console open" );
 
-	con_drawnotify = Cvar_Get( "con_drawnotify", "0", CVAR_CHEAT );
+	con_drawnotify = Cvar_Get( "con_drawnotify", "0", CVAR_ARCHIVE );
 	Cvar_SetDescription( con_drawnotify, "Draw console print messages at top of screen" );
 
 	con_maxnotify = Cvar_Get( "con_maxnotify", "4", CVAR_ARCHIVE_ND );

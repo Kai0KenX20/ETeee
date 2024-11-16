@@ -91,10 +91,10 @@ void tc_vis_init(void) {
 	slick_head = NULL;
 	//landmine_head = NULL;
 
-	triggers_draw = Cvar_Get("r_drawTriggers", "0", CVAR_ARCHIVE_ND | CVAR_CHEAT);
-	clips_draw = Cvar_Get("r_drawClips", "0", CVAR_ARCHIVE_ND | CVAR_CHEAT);
-	slicks_draw = Cvar_Get("r_drawSlicks", "0", CVAR_ARCHIVE_ND | CVAR_CHEAT);
-	//landmines_draw = Cvar_Get("r_drawLandmines", "0", CVAR_ARCHIVE_ND | CVAR_CHEAT);
+	triggers_draw = Cvar_Get("r_drawTriggers", "0", CVAR_ARCHIVE_ND | CVAR_ARCHIVE);
+	clips_draw = Cvar_Get("r_drawClips", "0", CVAR_ARCHIVE_ND | CVAR_ARCHIVE);
+	slicks_draw = Cvar_Get("r_drawSlicks", "0", CVAR_ARCHIVE_ND | CVAR_ARCHIVE);
+	//landmines_draw = Cvar_Get("r_drawLandmines", "0", CVAR_ARCHIVE_ND | CVAR_ARCHIVE);
 
 	trigger_shader_setting = Cvar_Get("r_drawTriggersShader", "<tcRender>", CVAR_ARCHIVE_ND | CVAR_LATCH);
 	clip_shader_setting = Cvar_Get("r_drawClipsShader", "<tcRender>", CVAR_ARCHIVE_ND | CVAR_LATCH);

@@ -358,7 +358,7 @@ static const vmCvarTableItem_t game_cvars[] = {
 	{ &g_timelimit, "timelimit", "0", CVAR_SERVERINFO | CVAR_ARCHIVE | CVAR_NORESTART, qtrue },
 
 #ifdef ALLOW_GSYNC
-	{ &g_synchronousClients, "g_synchronousClients", "0", CVAR_SYSTEMINFO | CVAR_CHEAT, qfalse  },
+	{ &g_synchronousClients, "g_synchronousClients", "0", CVAR_SYSTEMINFO | CVAR_ARCHIVE, qfalse  },
 #endif // ALLOW_GSYNC
 
 	{ &g_teamForceBalance, "g_teamForceBalance", "0", CVAR_ARCHIVE, qfalse, qfalse, G_CheckBalanceTeams },                            // NERVE - SMF - merge from team arena
@@ -404,9 +404,9 @@ static const vmCvarTableItem_t game_cvars[] = {
 	{ &g_forcerespawn, "g_forcerespawn", "0", 0, qtrue },
 	{ &g_inactivity, "g_inactivity", "0", 0, qtrue },
 	{ &g_debugMove, "g_debugMove", "0", 0, qfalse },
-	{ &g_debugDamage, "g_debugDamage", "0", CVAR_CHEAT, qfalse },
+	{ &g_debugDamage, "g_debugDamage", "0", CVAR_ARCHIVE, qfalse },
 	{ &g_debugAlloc, "g_debugAlloc", "0", 0, qfalse },
-	{ &g_debugBullets, "g_debugBullets", "0", CVAR_CHEAT, qfalse}, //----(SA)	added
+	{ &g_debugBullets, "g_debugBullets", "0", CVAR_ARCHIVE, qfalse}, //----(SA)	added
 	{ &g_motd, "g_motd", "", CVAR_ARCHIVE, qfalse },
 
 	{ &voteFlags, "voteFlags", "0", CVAR_TEMP | CVAR_ROM | CVAR_SERVERINFO, qfalse },
@@ -426,13 +426,13 @@ static const vmCvarTableItem_t game_cvars[] = {
 
 	{ &g_developer, "developer", "0", CVAR_TEMP, qfalse },
 	{ &g_rankings, "g_rankings", "0", 0, qfalse },
-	{ &g_userAim, "g_userAim", "1", CVAR_CHEAT, qfalse },
+	{ &g_userAim, "g_userAim", "1", CVAR_ARCHIVE, qfalse },
 
 	{ &g_smoothClients, "g_smoothClients", "1", 0, qfalse },
 	{ &pmove_fixed, "pmove_fixed", "0", CVAR_SYSTEMINFO, qfalse },
 	{ &pmove_msec, "pmove_msec", "8", CVAR_SYSTEMINFO, qfalse, qfalse, G_CheckRangeCvar },
 
-	{ &g_scriptName, "g_scriptName", "", CVAR_CHEAT, qfalse },
+	{ &g_scriptName, "g_scriptName", "", CVAR_ARCHIVE, qfalse },
 
 	//bani - #184
 	{ NULL, "P", "", CVAR_SERVERINFO_NOUPDATE, qfalse, qfalse },
@@ -460,16 +460,16 @@ static const vmCvarTableItem_t game_cvars[] = {
 	// state vars
 	{ &z_serverflags, "z_serverflags", "0", 0, qfalse, qfalse },
 
-	{ &g_debugConstruct, "g_debugConstruct", "0", CVAR_CHEAT, qfalse },
+	{ &g_debugConstruct, "g_debugConstruct", "0", CVAR_ARCHIVE, qfalse },
 
-	{ &g_scriptDebug, "g_scriptDebug", "0", CVAR_CHEAT, qfalse },
+	{ &g_scriptDebug, "g_scriptDebug", "0", CVAR_ARCHIVE, qfalse },
 
 	// What level of detail do we want script printing to go to.
-	{ &g_scriptDebugLevel, "g_scriptDebugLevel", "0", CVAR_CHEAT, qfalse },
+	{ &g_scriptDebugLevel, "g_scriptDebugLevel", "0", CVAR_ARCHIVE, qfalse },
 
 	// How fast do we want Allied single player movement?
-//	{ &g_movespeed, "g_movespeed", "127", CVAR_CHEAT, qfalse },
-	{ &g_movespeed, "g_movespeed", "76", CVAR_CHEAT, qfalse },
+//	{ &g_movespeed, "g_movespeed", "127", CVAR_ARCHIVE, qfalse },
+	{ &g_movespeed, "g_movespeed", "76", CVAR_ARCHIVE, qfalse },
 
 	// Arnout: LMS
 	{ &g_lms_teamForceBalance,  "g_lms_teamForceBalance",    "1", CVAR_ARCHIVE, qfalse, qfalse, G_CheckBalanceTeams },
